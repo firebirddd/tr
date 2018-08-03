@@ -3,6 +3,7 @@ namespace app\controllers;
 
 use app\models\LoginForm;
 use app\models\SignupForm;
+use app\models\Socials;
 use app\models\User;
 use Yii;
 use yii\web\Controller;
@@ -36,13 +37,6 @@ class AuthController extends Controller
     }
 
 
-    public function actionTest()
-    {
-        $user = User::findOne(1);
-        Yii::$app->user->login($user);
-    }
-
-
     public function actionSignup()
     {
         $model = new SignupForm();
@@ -56,4 +50,17 @@ class AuthController extends Controller
 
         return $this->render('signup', ['model' => $model]);
     }
+
+
+
+
+
+    public function actionLoginVk()
+    {
+        $user = new User();
+        if($user->loginFromVk())
+            return $this->redirect(['site/index']);
+        return $this->redirect(['site/index']);
+    }
+
 }

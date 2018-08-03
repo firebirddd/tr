@@ -4,6 +4,8 @@
 
 function d()
 {
+    echo '<meta charset="utf-8">';
+
     foreach (func_get_args() as $obj)
     {
         echo'<pre>';
@@ -17,6 +19,7 @@ function d()
 
 function v()
 {
+    echo '<meta charset="utf-8">';
     foreach (func_get_args() as $obj)
     {
         echo'<pre>';

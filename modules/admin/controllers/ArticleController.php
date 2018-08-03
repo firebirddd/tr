@@ -71,7 +71,7 @@ class ArticleController extends Controller
     {
         $model = new Article();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveArticle()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -90,8 +90,7 @@ class ArticleController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveArticle()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -169,8 +168,8 @@ class ArticleController extends Controller
 
         if(Yii::$app->request->isPost)
         {
-            $newCcategoryId = Yii::$app->request->post('category');
-            if($article->saveCategory($newCcategoryId))
+            $newCategoryId = Yii::$app->request->post('category');
+            if($article->saveCategory($newCategoryId))
                 return $this->redirect(['view', 'id' => $article->id]);
         }
 

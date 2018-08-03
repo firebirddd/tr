@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="leave-comment mr0">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-m d-offset-2">
 
             <div class="site-login">
                 <h1><?= Html::encode($this->title) ?></h1>
@@ -51,6 +51,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
 
+        </div>
+
+        <div class="col-md-2">
+            <script type="text/javascript" src="https://vk.com/js/api/openapi.js?158"></script>
+            <script type="text/javascript">
+                VK.init({apiId: 6644855});
+            </script>
+
+            <!-- VK Widget -->
+            <div id="vk_auth"></div>
+            <script type="text/javascript">
+                VK.Widgets.Auth("vk_auth", {"authUrl":"/auth/login-vk"});
+            </script>
         </div>
     </div>
 </div>
