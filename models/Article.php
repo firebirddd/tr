@@ -73,14 +73,6 @@ class Article extends \yii\db\ActiveRecord
         return $this->hasMany(ArticleTag::className(), ['article_id' => 'id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getComments()
-    {
-        return $this->hasMany(Comment::className(), ['article_id' => 'id']);
-    }
-
 
     public function saveImage($imageName)
     {
@@ -134,6 +126,12 @@ class Article extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
             ->viaTable('article_tag', ['article_id' => 'id']);
+    }
+
+
+    public function getComments()
+    {
+        return $this->hasMany(Comment::className(), ['article_id' => 'id']);
     }
 
 
@@ -207,5 +205,24 @@ class Article extends \yii\db\ActiveRecord
     {
         $this->user_id = Yii::$app->user->id;
         return $this->save();
+    }
+
+
+    public function getArticleComments()
+    {
+        return $this->getComments()->where(['status' => 1])->all();
+    }
+
+
+    public function getAuthor()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+
+    public function viewedCounter()
+    {
+        $this->viewed += 1;
+        return $this->update(false);
     }
 }

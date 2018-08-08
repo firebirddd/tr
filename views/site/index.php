@@ -54,7 +54,7 @@ $this->title = 'My Yii Application';
                                 </span>
 
                                 <ul class="text-center pull-right">
-                                    <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
+                                    <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?=$article->viewed ?>
                                 </ul>
                             </div>
                         </div>

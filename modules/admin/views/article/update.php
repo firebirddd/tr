@@ -19,3 +19,5 @@ $this->params['breadcrumbs'][] = 'Update';
     ]) ?>
 
 </div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>

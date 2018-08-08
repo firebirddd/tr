@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\Category;
+use app\models\CommentsForm;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -141,10 +142,12 @@ class SiteController extends Controller
     public function actionView($id)
     {
         $viewD['article'] = Article::findOne($id);
-
         $viewD['popular'] = Article::getPopular();
         $viewD['recent'] = Article::getRecent();
         $viewD['categories'] = Category::getAll();
+        $viewD['comments'] = $viewD['article']->getArticleComments();
+        $viewD['commentsForm'] = new CommentsForm();
+        $viewD['article']->viewedCounter();
 
         return $this->render('single', $viewD);
     }
@@ -161,5 +164,21 @@ class SiteController extends Controller
         $viewD['categories'] = Category::getAll();
 
         return $this->render('category', $viewD);
+    }
+
+
+    public function actionComment($id)
+    {
+        $model = new CommentsForm();
+
+        if(Yii::$app->request->isPost)
+        {
+            $model->load(Yii::$app->request->post());
+            if($model->saveComment($id))
+            {
+                Yii::$app->session->setFlash('comment', 'Your comment will be added soon!');
+                return $this->redirect(['site/view', 'id' => $id]);
+            }
+        }
     }
 }

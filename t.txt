@@ -1,0 +1,145 @@
+array (
+  0 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\controllers\\SiteController.php',
+    'line' => 150,
+    'function' => 'viewedCounter',
+    'class' => 'app\\models\\Article',
+    'type' => '->',
+  ),
+  1 => 
+  array (
+    'function' => 'actionView',
+    'class' => 'app\\controllers\\SiteController',
+    'type' => '->',
+  ),
+  2 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\InlineAction.php',
+    'line' => 57,
+    'function' => 'call_user_func_array',
+  ),
+  3 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Controller.php',
+    'line' => 157,
+    'function' => 'runWithParams',
+    'class' => 'yii\\base\\InlineAction',
+    'type' => '->',
+  ),
+  4 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Module.php',
+    'line' => 528,
+    'function' => 'runAction',
+    'class' => 'yii\\base\\Controller',
+    'type' => '->',
+  ),
+  5 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\web\\Application.php',
+    'line' => 103,
+    'function' => 'runAction',
+    'class' => 'yii\\base\\Module',
+    'type' => '->',
+  ),
+  6 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Application.php',
+    'line' => 386,
+    'function' => 'handleRequest',
+    'class' => 'yii\\web\\Application',
+    'type' => '->',
+  ),
+  7 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\web\\index.php',
+    'line' => 49,
+    'function' => 'run',
+    'class' => 'yii\\base\\Application',
+    'type' => '->',
+  ),
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+array (
+  0 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\controllers\\SiteController.php',
+    'line' => 150,
+    'function' => 'viewedCounter',
+    'class' => 'app\\models\\Article',
+    'type' => '->',
+  ),
+  1 => 
+  array (
+    'function' => 'actionView',
+    'class' => 'app\\controllers\\SiteController',
+    'type' => '->',
+  ),
+  2 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\InlineAction.php',
+    'line' => 57,
+    'function' => 'call_user_func_array',
+  ),
+  3 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Controller.php',
+    'line' => 157,
+    'function' => 'runWithParams',
+    'class' => 'yii\\base\\InlineAction',
+    'type' => '->',
+  ),
+  4 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Module.php',
+    'line' => 528,
+    'function' => 'runAction',
+    'class' => 'yii\\base\\Controller',
+    'type' => '->',
+  ),
+  5 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\web\\Application.php',
+    'line' => 103,
+    'function' => 'runAction',
+    'class' => 'yii\\base\\Module',
+    'type' => '->',
+  ),
+  6 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\vendor\\yiisoft\\yii2\\base\\Application.php',
+    'line' => 386,
+    'function' => 'handleRequest',
+    'class' => 'yii\\web\\Application',
+    'type' => '->',
+  ),
+  7 => 
+  array (
+    'file' => 'C:\\openserver\\OSPanel\\domains\\treasure\\web\\index.php',
+    'line' => 49,
+    'function' => 'run',
+    'class' => 'yii\\base\\Application',
+    'type' => '->',
+  ),
+)
+
+
+
+

@@ -26,9 +26,11 @@ use yii\helpers\Html;
                             <li><a href="/auth/login">Login</a></li>
                             <li><a href="/auth/signup">Register</a></li>
                         <?php else : ?>
-                            <?= Html::beginForm(['/auth/logout'], 'post')
-                            . Html::submitButton('logout(' . Yii::$app->user->identity->name . ')', ['class' => 'btn btn-link logout', 'style' => 'padding-top:10p;']) ?>
-
+                            <li>
+                                <a href="/auth/logout" class="btn btn-link" style="padding-top: 10px">
+                                    logout(<?=Yii::$app->user->identity->name; ?>)
+                                </a>
+                            </li>
                         <?php endif; ?>
                     </ul>
                 </div>
